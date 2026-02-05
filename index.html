@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Selomoyo Nature - Desa Selomoyo, Kecamatan Kaliangkrik | Wisata Lereng Sumbing & Sentra Cabai</title>
+    <meta name="description" content="Selomoyo Nature adalah website Desa Selomoyo di Kecamatan Kaliangkrik, Kabupaten Magelang. Informasi wisata alam lereng Gunung Sumbing, pertanian cabai rawit, dan potensi kawasan sekitar.">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: {
+                        utama: '#15803d',   /* Hijau */
+                        aksen: '#fbbf24',   /* Kuning/Emas */
+                        pedas: '#ef4444',   /* Merah Cabai */
+                        bgsekunder: '#f0fdf4',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Style untuk transisi menu mobile */
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 antialiased">
+
+    <nav class="bg-white/95 backdrop-blur-md fixed w-full top-0 z-50 border-b border-gray-100 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="flex items-center gap-3">
+                    <img src="logo.png" alt="Logo Desa Selomoyo" class="h-10 w-10 object-contain">
+                    <span class="text-xl font-bold tracking-tight text-utama">
+                        SELOMOYO<span class="text-gray-900">NATURE</span>
+                    </span>
+                </a>
+
+                <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none p-2 rounded hover:bg-gray-100">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <ul class="flex space-x-8 font-medium text-sm text-gray-600">
+                        <li><a href="#tentang" class="hover:text-utama transition">Profil</a></li>
+                        <li><a href="#sejarah" class="hover:text-utama transition">Sejarah</a></li>
+                        <li><a href="#berita" class="hover:text-utama transition">Berita</a></li>
+                        <li><a href="#pertanian" class="hover:text-utama transition">Hasil Tani</a></li>
+                        <li><a href="#wisata" class="hover:text-utama transition">Wisata</a></li>
+                        <li><a href="#lokasi" class="hover:text-utama transition">Lokasi</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out border-t border-gray-100 font-medium text-gray-600">
+                <ul class="flex flex-col space-y-4 pt-4 pb-2">
+                    <li><a href="#tentang" class="block hover:text-utama transition py-2">Profil</a></li>
+                    <li><a href="#sejarah" class="block hover:text-utama transition py-2">Sejarah</a></li>
+                    <li><a href="#berita" class="block hover:text-utama transition py-2">Berita</a></li>
+                    <li><a href="#pertanian" class="block hover:text-utama transition py-2">Hasil Tani</a></li>
+                    <li><a href="#wisata" class="block hover:text-utama transition py-2">Wisata</a></li>
+                    <li><a href="#lokasi" class="block hover:text-utama transition py-2">Lokasi</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-screen flex items-center justify-center text-center px-4 pt-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.pexels.com/photos/5547268/pexels-photo-5547268.jpeg?_gl=1*yv0ryw*_ga*NDMzODQ0OTYzLjE3NjY1NjEwNDU.*_ga_8JE65Q40S6*czE3NjY5MTAxMzAkbzMkZzEkdDE3NjY5MTAyMjMkajM2JGwwJGgw" 
+                 alt="Pemandangan Selomoyo"
+                 loading="lazy"
+                 class="w-full h-full object-cover">    
+            <div class="absolute inset-0 bg-black/60 mix-blend-multiply"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-4xl text-white mt-12 animate-fade-in">
+            <span class="bg-pedas/90 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 inline-block shadow-lg border border-red-400">
+                KKN PPM UGM 2025
+            </span>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-lg">
+                Desa Selomoyo <br> <span class="text-aksen">Lereng Gunung Sumbing</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 font-light max-w-2xl mx-auto drop-shadow-md">
+                Salah satu sentra cabai rawit di wilayah Kaliangkrik dan destinasi wisata alam terasering yang memanjakan mata di Kaliangkrik.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#pertanian" class="bg-aksen text-black font-bold py-4 px-8 rounded-full transition hover:bg-yellow-400 shadow-xl hover:shadow-yellow-500/20">
+                    Hubungi Petani
+                </a>
+                <a href="#wisata" class="bg-white/10 backdrop-blur border border-white text-white font-bold py-4 px-8 rounded-full transition hover:bg-white hover:text-black">
+                    Lihat Wisata
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="tentang" class="py-20 container mx-auto px-6 scroll-mt-24">
+        <div class="flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl font-bold mb-6 text-gray-900">Tanah Subur Vulkanis</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed text-lg text-justify">
+                    Desa Selomoyo terletak di Kecamatan Kaliangkrik, Kabupaten Magelang, pada kawasan lereng Gunung Sumbing. Kondisi agroklimat yang sejuk dan tanah vulkanis menjadikan desa ini ideal untuk pengembangan hortikultura, khususnya cabai rawit sebagai komoditas unggulan.
+                </p>
+                <div class="bg-green-50 p-6 rounded-xl border border-green-100">
+                    <h4 class="font-bold text-utama mb-2 flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Inovasi Smart Farming
+                    </h4>
+                    <p class="text-sm text-gray-600">
+                        Penerapan teknologi pertanian modern menjaga pH tanah tetap stabil, menghasilkan cabai yang tebal, tahan simpan, dan berbobot.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 relative h-[400px] rounded-2xl overflow-hidden shadow-2xl ring-8 ring-gray-50">
+                <img src="assets\TeraseringSelo.jpeg" 
+                     class="w-full h-full object-cover" alt="Terasering">
+                <div class="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sejarah" class="py-20 bg-gray-50 scroll-mt-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl p-8 md:p-16 border border-gray-100 relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 text-gray-50">
+                    <svg class="w-64 h-64" fill="currentColor" viewBox="0 0 24 24"><path d="M13 3c-4.97 0-9 4.03-9 9H3l4 4 4-4H8c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C10.27 20.1 12.53 21 15 21c4.97 0 9-4.03 9-9s-4.03-9-9-9z"/></svg>
+                </div>
+
+                <div class="relative z-10 text-center">
+                    <span class="text-utama font-bold text-sm tracking-wider uppercase mb-3 block">Napak Tilas Desa</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Asal-Usul & Sejarah Desa</h2>
+                    
+                    <div class="text-gray-600 leading-relaxed text-lg text-center mb-10 max-w-3xl mx-auto">
+                        <p class="mb-6">
+                            Desa Selomoyo awalnya adalah lokasi yang tidak bernama dan hanyalah area perkebunan sayuran dan tembakau Kaliangkrik pada masa kolonial. Area desa pada masa revolusi dalam keadaan perang karena desa dan area sekitarnya adalah tempat singgah bagi para Pejuang / Laskar. Bahkan satu kejadian terjadi suatu serangan dari pesawat pengintai Belanda. Setelah perang, pada masa awal kemerdekaan, Desa Selomoyo mendapatkan namanya sebagai salah satu dari 19 Desa Kecamatan Kaliangkrik.
+                        </p>
+                        <p>
+                             Arti nama desa yaitu kata “Selo” yang berarti batu sementara “Moyo” tidak diketahui. Sepanjang kontemporer desa Selomoyo berkembang menjadi Swasembada dan menghasilkan berbagai jenis sayuran dan tembakau untuk Kecamatan dan Kabupaten. Sekaligus dalam jangka waktu yang disebutkan, secara sosial, pada masa lalu warga desa melakukan perayaan kebudayaan yaitu Jatilan (kuda lumping) dan Merti (ritual) desa.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-4">
+                        <a href="https://drive.google.com/file/d/1HRGLCBZ3cZAoMJEeTNtXdS6PIKgvuFai/view?usp=sharing" target="_blank" 
+                        class="inline-flex items-center gap-3 bg-utama text-white px-8 py-4 rounded-full font-bold hover:bg-green-700 transition shadow-lg hover:shadow-green-900/30 group">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            Baca Sejarah Lengkap (3 Lembar)
+                        </a>
+                        <p class="text-xs text-gray-400 font-medium tracking-wide uppercase">Tersedia dalam format dokumen digital</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="berita" class="py-24 bg-gray-50 scroll-mt-24">
+        <div class="container mx-auto px-6">
+
+            <div class="text-center mb-16 max-w-2xl mx-auto">
+            <span class="text-utama font-bold text-sm uppercase tracking-wider">
+                Informasi Desa
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 mt-2">
+                Berita Terbaru
+            </h2>
+            <p class="text-gray-600 mt-2">
+                Informasi singkat dan kegiatan terbaru di Desa Selomoyo.
+            </p>
+            </div>
+
+            <div id="daftar-berita" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+
+        </div>
+    </section>
+
+
+
+    <section id="pertanian" class="py-24 bg-bgsekunder scroll-mt-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 max-w-2xl mx-auto">
+                <span class="text-utama font-bold text-sm tracking-wider uppercase">Kalender Tani Desa</span>
+                <h2 class="text-3xl font-bold text-gray-900 mt-2">Komoditas & Jadwal Panen</h2>
+                <p class="text-gray-600 mt-2">Informasi ketersediaan stok berdasarkan musim tanam di Selomoyo.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col border-t-4 border-utama group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1553787434-45e1d245bfbb?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-utama text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            Segar Harian
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800">Sayuran Dataran Tinggi</h3>
+                        <p class="text-gray-600 text-sm mb-4">Kubis, Sawi , dan Daun Bawang dengan tekstur renyah khas pegunungan.</p>
+                        <div class="mt-auto bg-green-50 rounded-lg p-4 border border-green-100">
+                            <div class="flex items-start gap-3">
+                                <div class="text-2xl">🗓️</div>
+                                <div>
+                                    <p class="text-xs font-bold text-gray-500 uppercase">Jadwal Panen</p>
+                                    <p class="font-bold text-utama">Rotasi 3 Bulan Sekali</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-2xl transform md:-translate-y-4 flex flex-col border-t-4 border-pedas relative z-10 ring-4 ring-red-50 group">
+                    <div class="absolute top-0 right-0 bg-pedas text-white text-xs font-bold px-4 py-1 rounded-bl-lg z-20">
+                        ⭐ PRODUK UNGGULAN
+                    </div>
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://plus.unsplash.com/premium_photo-1726138640046-52ff32b8505e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-3xl font-bold mb-2 text-gray-900">Cabai Rawit Merah</h3>
+                        <p class="text-gray-600 mb-4">
+                            Komoditas unggulan hortikultura dengan permintaan pasar tinggi.
+                        </p>
+                        <div class="mt-auto bg-red-50 rounded-lg p-4 border border-red-100">
+                            <div class="flex items-start gap-3">
+                                <div class="text-2xl">🔥</div>
+                                <div>
+                                    <p class="text-xs font-bold text-gray-500 uppercase">Jadwal Panen</p>
+                                    <p class="font-bold text-pedas text-lg">SEPANJANG TAHUN</p>
+                                    <p class="text-xs text-gray-600">Puncak: Juli - Agustus</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col border-t-4 border-aksen group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://plus.unsplash.com/premium_photo-1723925093264-40b6b957c44d?q=80&w=1024&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-aksen text-black text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            Pulen Wangi
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800">Beras Sumbing</h3>
+                        <p class="text-gray-600 text-sm mb-4">Padi varietas unggul yang diairi mata air gunung langsung. Putih alami tanpa pemutih.</p>
+                        <div class="mt-auto bg-yellow-50 rounded-lg p-4 border border-yellow-100">
+                            <div class="flex items-start gap-3">
+                                <div class="text-2xl">🌾</div>
+                                <div>
+                                    <p class="text-xs font-bold text-gray-500 uppercase">Jadwal Panen</p>
+                                    <p class="font-bold text-yellow-700">2x Setahun (Raya)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+
+    <!-- Dusun -->
+    <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between text-center hover:shadow-lg transition">
+        <h3 class="text-3xl font-bold text-green-600">6</h3>
+        <p class="mt-2 font-semibold text-gray-800">Dusun</p>
+        <p class="mt-3 text-sm text-gray-600 leading-relaxed">
+        Desa Selomoyo terdiri dari enam dusun yang tersebar di wilayah lereng Gunung Sumbing.
+        </p>
+    </div>
+
+    <!-- Lahan Pertanian (tanpa angka) -->
+    <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between text-center hover:shadow-lg transition">
+        <h3 class="text-3xl font-bold text-green-600">🌱</h3>
+        <p class="mt-2 font-semibold text-gray-800">Lahan Pertanian</p>
+        <p class="mt-3 text-sm text-gray-600 leading-relaxed">
+        Lahan pertanian yang tersebar di beberapa dusun dengan dominasi tanaman cabai dan hortikultura.
+        </p>
+    </div>
+
+    <!-- Penduduk (tanpa angka) -->
+    <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between text-center hover:shadow-lg transition">
+        <h3 class="text-3xl font-bold text-green-600">👥</h3>
+        <p class="mt-2 font-semibold text-gray-800">Penduduk</p>
+        <p class="mt-3 text-sm text-gray-600 leading-relaxed">
+        Masyarakat desa yang mayoritas bermata pencaharian sebagai petani dan pelaku UMKM lokal.
+        </p>
+    </div>
+
+    <!-- Akses Infrastruktur (tanpa angka) -->
+    <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between text-center hover:shadow-lg transition">
+        <h3 class="text-3xl font-bold text-green-600">🛣️</h3>
+        <p class="mt-2 font-semibold text-gray-800">Akses Infrastruktur</p>
+        <p class="mt-3 text-sm text-gray-600 leading-relaxed">
+        Akses lancar menuju pasar Kaliangkrik serta kawasan wisata Sumbing.
+        </p>
+    </div>
+
+    <!-- Potensi Wisata -->
+    <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between text-center hover:shadow-lg transition">
+        <h3 class="text-3xl font-bold text-green-600">🌄</h3>
+        <p class="mt-2 font-semibold text-gray-800">Potensi Wisata</p>
+        <p class="mt-3 text-sm text-gray-600 leading-relaxed">
+        Memiliki panorama alam pegunungan dan potensi wisata berbasis alam serta pertanian.
+        </p>
+    </div>
+
+    </div>
+    </section>
+
+
+    <section id="wisata" class="py-24 container mx-auto px-6 scroll-mt-24">
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900">Pesona Alam Kaliangkrik</h2>
+            <p class="text-gray-600 mt-2">Nikmati pemandangan yang menenangkan hati.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 h-auto md:h-[500px]">
+            <div class="md:col-span-2 md:row-span-2 relative rounded-2xl overflow-hidden group h-64 md:h-auto cursor-pointer">
+                <img src="assets\ViewAtas.jpeg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+                    <h3 class="text-white text-2xl font-bold">Pemandangan</h3>
+                </div>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden group h-64 md:h-auto cursor-pointer">
+                <img src="assets\Terasering.jpeg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+            </div>
+            <div class="relative rounded-2xl overflow-hidden group h-64 md:h-auto cursor-pointer">
+                <img src="assets\View2.jpeg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+            </div>
+            <div class="md:col-span-2 relative rounded-2xl overflow-hidden group h-64 md:h-auto cursor-pointer">
+                <img src="assets\ViewSamping.jpeg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                    <h3 class="text-white text-xl font-bold">Terasering Sawah</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lokasi" class="bg-gray-50 py-24 scroll-mt-24">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Lokasi Kami</h2>
+            
+            <div class="rounded-2xl overflow-hidden shadow-2xl h-[450px] w-full border-4 border-white relative z-0">
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    id="gmap_canvas" 
+                    src="https://maps.google.com/maps?q=Desa%20Selomoyo,%20Kaliangkrik,%20Magelang&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    marginheight="0" 
+                    marginwidth="0">
+                </iframe>
+            </div>
+            
+            <div class="mt-6">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=-7.444584346320145, 110.12560862201715" target="_blank" class="inline-flex items-center text-utama font-bold hover:underline gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    Buka Rute ke Desa Selomoyo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white border-t border-gray-800 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-2xl font-bold text-white mb-4 flex justify-center items-center gap-3">
+                 <img src="logo.png" alt="Logo" class="h-8 w-8 object-contain brightness-200 grayscale">
+                <span>SELOMOYO<span class="text-aksen">NATURE</span></span>
+            </h3>
+            <p class="text-gray-400 text-sm mb-6 max-w-lg mx-auto">
+                Dibuat oleh Tim KKN Satyabhaktikaliangkrik 2025.
+                <br>Merakyat, Mandiri, Berkelanjutan.
+            </p>
+            <div class="flex flex-col items-center gap-4 mb-8">
+                <!-- Kontak -->
+                <a href="https://wa.me/6281234567890" target="_blank"
+                class="inline-flex items-center gap-2 text-green-400 font-semibold hover:text-green-300 transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.16 5.335 5.495 0 12.05 0c3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24z"/>
+                    </svg>
+                    Kontak Desa: +62 812-3456-7890
+                </a>
+
+                <!-- Media Sosial -->
+                <div class="flex gap-6">
+                    <a href="https://www.instagram.com/satyabhaktikaliangkrik/" 
+                        target="_blank"
+                        rel="noopener"
+                        class="text-gray-500 hover:text-white transition">
+                            Instagram
+                    </a>
+                </div>
+
+            </div>
+
+            <p class="text-gray-600 text-xs">© 2025 Desa Selomoyo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const menuLinks = menu.querySelectorAll('a');
+
+    let isOpen = false;
+
+    btn.addEventListener('click', () => {
+        isOpen = !isOpen;
+        if (isOpen) {
+            menu.classList.remove('max-h-0', 'opacity-0');
+            menu.classList.add('max-h-96', 'opacity-100');
+        } else {
+            menu.classList.add('max-h-0', 'opacity-0');
+            menu.classList.remove('max-h-96', 'opacity-100');
+        }
+    });
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            isOpen = false;
+            menu.classList.add('max-h-0', 'opacity-0');
+            menu.classList.remove('max-h-96', 'opacity-100');
+        });
+    });
+    </script>
+
+    <script>
+    fetch('data/berita.json')
+    .then(res => res.json())
+    .then(data => {
+        const container = document.getElementById('daftar-berita');
+        if (!container) return;
+
+        data.forEach(item => {
+        container.innerHTML += `
+            <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <img src="${item.gambar}" alt="${item.judul}"
+                class="h-48 w-full object-cover">
+            <div class="p-6">
+                <p class="text-xs text-gray-500 mb-1">${item.tanggal}</p>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">
+                ${item.judul}
+                </h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                ${item.isi}
+                </p>
+            </div>
+            </article>
+        `;
+        });
+    })
+    .catch(err => console.error('Gagal load berita:', err));
+    </script>
+
+
+
+</body>
+</html>
